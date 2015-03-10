@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Spotify Web App</title>
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="css/Spotifycss.css">
+   </head>
+   <body>
+      <div class= "wrapp">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+         <script src="js/bootstrap.min.js"></script>
+         <script src="js/handlebars.min.js"></script>
+         <!-- <script type="text/javascript">$('#ID').css("height", $(document).height());</script>-->
+         <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+               <div class="navbar-header">
+                  <a class="navbar-brand" href="#">Spotify Web Application</a>
+               </div>
+               <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                     <li ><a id ="artistssbtn" href="">Artists</a></li>
+                     <li><a id ="songsbtn" href="">Songs</a></li>
+                     <li><a id ="albumsbtn" href="">Albums</a></li>
+                  </ul>
+                  <form id="search-form">
+                     <ul class="nav navbar-nav navbar-right">
+                        <li><input type="text" id="query" class="form-control" placeholder="Type an Artist Name"/></li>
+                        <li><input type="submit" id="search" class="btn btn-primary" value="Search"  /></li>
+                  </form>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <div id="leftside" class="leftside">
+            <div id= "artistresutlts"></div>
+         </div>
+         <div class="maindiv">
+            <div id="results"></div>
+            <div id="songresutlts"></div>
+         </div>
+         <div class ="album-holder">
+            <div id= "a1results"></div>
+            <div id= "a2results"></div>
+            <div id= "a3results"></div>
+         </div>
+         
+         <script id="results-template" type="text/x-handlebars-template">         
+            {{#each albums.items}}
+            <div style="background-image:url({{images.1.url}})" data-album-id="{{id}}" class="cover"><a href="{{external_urls.spotify}}"><div class="spotify-button"></div></a></div>
+            {{/each}}
+         </script>
+         <script id="results-template2" type="text/x-handlebars-template">
+            {{#each artists}}
+
+            <div class = "Awrap">
+            <div class="artist-text">{{name}}</div>
+            <a href="{{external_urls.spotify}}"><div style="background-image:url({{images.2.url}})" class="artist-cover"></div></a>
+            <div class ="artist-text">Followers: {{followers.total}}</div><p><div class = "breaktop"><br></div><div class = "breakbot"></div></div>
+            
+            {{/each}}
+         </script>
+         <script id="results-template3" type="text/x-handlebars-template">
+
+            <div class = "table-responsive">
+            <table class ="table">
+            <thead>
+            <tr class = "song-text"> 
+               <th>Track Name</th>
+               <th>Album</th>
+               <th>Artist</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each tracks}}
+            <tr>
+               <td class="song-text" data-track-id="{{id}}" >{{name}}</td>
+               <td class = "song-text">{{album.name}}</td> 
+               <td class = "song-text">{{artists.0.name}}</td></div>
+               </div>
+            </tr>   
+               {{/each}}
+            </tbody>
+            </table>
+            </div>
+         </script>
+         <script id="results-template4" type="text/x-handlebars-template">
+          {{#each items}}
+            <div class = "Awrap">
+            <div class="artist-text">{{name}}</div>
+            <div style="background-image:url({{images.1.url}})" class="artist-cover" data-album-id="{{id}}"><a herf = "{{external_urls.spotify}}"></a></div>
+            <p></p>
+            {{/each}}
+         </script>
+         <script id="results-template5" type="text/x-handlebars-template">
+          {{#each items}}
+            <div class = "Awrap">
+            <div class="artist-text">{{name}}</div>
+            <div style="background-image:url({{images.1.url}})" class="artist-cover" data-album-id="{{id}}"></div>
+            <p></p>
+            
+            {{/each}}
+         </script>
+         <script id="results-template6" type="text/x-handlebars-template">
+            {{#each items}}
+               <div class = "Awrap">
+               <div class="artist-text">{{name}}</div>
+               <div style="background-image:url({{images.1.url}})" class="artist-cover" data-album-id="{{id}}"></div>
+            <p></p>
+            {{/each}}
+         </script>
+         <script src="js/spot.js"></script>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,157 @@
+body, 
+html {
+    padding: 0px;
+    background-color: #1c1c1f;
+
+    height:100%;
+}
+div.wrap {
+    height:100%; 
+
+}
+
+.cover {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    border: 1px solid #84bd00;
+    border-radius: 25px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cover:hover {
+    cursor: pointer;
+}
+
+.cover.playing {
+    border: 2px solid #e45343;
+}
+
+.spotify-button {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    cursor: pointer;
+    margin-left: 200px;
+    height: 25px;
+    
+}
+
+#search-form, .form-control {
+    
+    position: relative;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 0px;
+    height: 25px;
+}
+
+.artist-cover{
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    position: relative;
+    border-radius: 50px;
+    border :2px solid #84bd00;
+    margin: 0 auto;
+}
+.artist-cover:hover {
+    cursor: pointer;
+}
+
+.artist-cover.playing {
+    border: 2px solid #e45343;
+}
+.artist-text{
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+.artist-wrap{
+    overflow: hidden;
+
+
+}
+.Awrap{ 
+    border-color: #fff;
+    border-radius: 20px;
+    width: 150px;
+    float: left;
+    vertical-align: center;
+}
+
+.song-text{
+    color: #fff;
+}
+.song-text:hover {
+    cursor: pointer;
+}
+
+.song-text.playing {
+   color: #84bd00;
+}
+.song-layout{
+    border-radius: 5px;
+    border :1px solid;
+    border-color: #fff;
+    margin: 0 auto;
+    width: 500px;
+
+}
+.album-holder{
+    width: 50%;
+    margin: 0 auto;
+
+}
+#leftside{
+    padding-top: 3.5%;
+    background-color: #333333;
+    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 175px;
+    height: 100%;
+    color: #000;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #000
+   
+    }
+
+#rightside{ 
+    background-color: #eee;
+    width:5%;
+    
+    }
+.maindiv {
+  background:#1c1c1f;
+  border-radius: 6px;
+  padding-left: 200px;
+  padding-top: 100px;
+  top: 0;
+  bottom: 0;
+
+}
+.breaktop {
+
+    border-top: 2px solid #000;
+    width: 175px;
+}
+.breakbot {
+
+   /* border-bottom: 2px solid #000;
+    width: 175px;*/
+}
+
+table, th, td {
+    max-width: 500px;
+    border-width: 1px;
+    border-style: solid none solid none;
+    border-color: #88898c #000 #88898c #000 ;
+
+}
